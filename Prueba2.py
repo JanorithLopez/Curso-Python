@@ -3,8 +3,12 @@
 
 
 if __name__ == '__main__':
-    Nombre = input("Ingrese su nombre: ")
-    Edad = int(input("Ingrese su edad: "))
-    Anio= int(input("Ingrese el anio actual: "))
-    Cien = "cumplira 100 anios en el: "
-    print(Nombre, Cien,(100 - Edad)+ Anio)
+    nombre = input("Ingrese su nombre: ")
+    edad = int(input("Ingrese su edad: "))
+    anio = int(input("Ingrese el anio actual: "))
+
+    cien = "{nombre} cumplira 100 anios en el: {anio_calculado}"
+    anio_calculado = (100 - edad) + anio
+
+    mensaje = cien.format(nombre=nombre, anio_calculado=anio_calculado)
+    print(mensaje)
