@@ -4,19 +4,24 @@
 	<meta charset="UTF-8">
 	<title>Documentos</title>
 	<link rel="stylesheet" type="text/css" href="Styles.css">
+	{% load static from staticfiles %}
 </head>
 
 <body>
-		
-	</div>
-
+	
 	<div class="Contenedor">
 		<div class="Superior">
+			<h1> {{encabezado}} </h1>
+
+			<p>Esto esta definido en base.html</p>
+	{% block contenido %}
+	{% endblock %}
+			
 			<h2>Crear nuevo documento</h2>
 		</div>
 			<form class="Formulario">
 				<input type="text" class="Input" placeholder="Nombre del documento" required autofocus>
-				<input type="date" class="Input" required>
+				<input type="datetime" class="Input" placeholder="Fecha" required>
 				<textarea class="Input" cols= "20" rows="3" placeholder="Cuerpo del documento"></textarea>
 
 				<div class="Boton">
