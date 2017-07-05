@@ -1,0 +1,60 @@
+html{
+	font-size: 18px;
+}
+
+body{
+	background-color: #98D4E6;
+}
+
+.Contenedor{
+	max-width: 450px;
+	height: auto;
+	margin: 5% auto;
+	background: green;
+	padding-bottom: 1rem;
+}
+
+.Superior{
+	width: 100%;
+	text-align: center;
+	padding: 2rem 0 1rem;
+	margin-bottom: 2rem;
+	border-top: solid .4rem #7FD6DE;
+}
+
+.Superior{
+	font-weight: bold;
+	color: #fff;
+	font-size: 18px;
+}
+
+.Formulario{
+	padding: 0 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.Botones{
+	display: flex;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+.Input{
+	background-color: #EFEFEF;
+	padding: .5rem;
+	margin: .5rem 0;
+	margin-bottom: .5rem 0;
+	border: none; border-bottom: solid #C8C8C8 .2rem;
+}
+
+.Input:focus{
+	border-bottom: solid #F39B53 .2rem;
+}
+
+.Boton{
+	width: 100%;
+	border-bottom: none;
+	color: #fff;
+}
