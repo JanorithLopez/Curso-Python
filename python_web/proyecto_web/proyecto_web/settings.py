@@ -119,3 +119,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Directorio donde django va a copiar los archivos estaticos encontrados
+# por el comando collectstatic
+STATIC_ROOT = 'static' 
+
+# Lista de directorios donde django va a buscar archivos estaticos
+# para copiarlos a STATIC_ROOT
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "statics"),
+]
