@@ -33,7 +33,7 @@ class MiVentana(Gtk.Window):
 
 	def pasar_texto(self, btn):
 		new_txt = self.texto.get_text()
-		self.label.set_markup(new_txt)
+		self.label.set_markup(new_txt).
 
 if __name__ == '__main__':
 	ventana = MiVentana()
