@@ -63,6 +63,12 @@ class VentanaBalance(Gtk.Window):
         cantidad_act = float(monto_activo)
         self.modelo_act.append([texto_act, cantidad_act])
 
+    def agregar_contenedor_pas(self):
+        self.contenedor = Gtk.Grid()
+        self.contenedor.set_column_homogeneous(True)
+        self.add(self.contenedor)
+
+
 if __name__ == '__main__':
     ventana = VentanaBalance()
     ventana.show_all()
