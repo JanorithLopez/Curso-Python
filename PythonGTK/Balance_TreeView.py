@@ -2,11 +2,11 @@ import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
-class VentanaBalance(Gtk.Window):
+class VentanaBalance(Gtk.ApplicationWindow):
     def __init__(self, *args, **kwargs):
         super(VentanaBalance, self).__init__(*args, **kwargs)
         self.set_default_size(500, 300)
-        self.connect('delete-event', Gtk.main_quit)
+        #self.connect('delete-event', Gtk.main_quit)
 
         self.agregar_cont_activo()
         self.agregar_label_act()
@@ -137,9 +137,6 @@ class VentanaBalance(Gtk.Window):
 
         self.total_capital = Gtk.Label('-- Total Capital --')
         self.contenedor_activo.attach(self.total_capital, 0,12,1,1)
-
-        
-
 
 if __name__ == '__main__':
     ventana = VentanaBalance()
