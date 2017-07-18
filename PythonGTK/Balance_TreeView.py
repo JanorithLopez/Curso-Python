@@ -21,6 +21,8 @@ class VentanaBalance(Gtk.Window):
         self.agregar_boton_pasivo()
         self.agregar_lista_pas()
 
+        self.agregar_totales()
+
     def agregar_cont_activo(self):
         self.contenedor_activo = Gtk.Grid()
         self.contenedor_activo.set_column_homogeneous(True)
@@ -123,6 +125,21 @@ class VentanaBalance(Gtk.Window):
         monto_pasivo = self.entrada_monto_pas.get_text()
         cantidad_pas = float(monto_pasivo)
         self.modelo_pas.append([texto_pas, cantidad_pas])
+
+    # SUMAR PASIVOS Y ACTIVOS
+
+    def agregar_totales(self):
+        self.total_activos = Gtk.Label('-- Total Activos --')
+        self.contenedor_activo.attach(self.total_activos, 0,10,1,1)
+
+        self.total_pasivos = Gtk.Label('-- Total Pasivos --')
+        self.contenedor_activo.attach(self.total_pasivos, 0,11,1,1)
+
+        self.total_capital = Gtk.Label('-- Total Capital --')
+        self.contenedor_activo.attach(self.total_capital, 0,12,1,1)
+
+        
+
 
 if __name__ == '__main__':
     ventana = VentanaBalance()
